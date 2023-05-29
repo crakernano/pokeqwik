@@ -1,26 +1,21 @@
 import { component$, Slot, useStyles$ } from '@builder.io/qwik';
-import { routeLoader$ } from '@builder.io/qwik-city';
-
-import Header from '~/components/starter/header/header';
-import Footer from '~/components/starter/footer/footer';
+import Navbar from '~/components/shared/navbar/navbar';
 
 import styles from './styles.css?inline';
+import { PokemonProvider } from '~/context/pokemon/pokemon-provider';
 
-export const useServerTimeLoader = routeLoader$(() => {
-  return {
-    date: new Date().toISOString(),
-  };
-});
+
 
 export default component$(() => {
   useStyles$(styles);
+
+
   return (
-    <>
-      <Header />
-      <main>
+    <PokemonProvider>
+      <Navbar />
+      <main class="flex flex-col items-center justify-center">
         <Slot />
       </main>
-      <Footer />
-    </>
+    </PokemonProvider>
   );
 });
