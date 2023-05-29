@@ -1,5 +1,4 @@
 import { component$, useComputed$, useSignal, useTask$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 interface Props {
     id: number | string;
     size?: number;

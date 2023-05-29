@@ -14,7 +14,7 @@ export default component$(() => {
 
     const onSubmit = $(()=>{
         formState.formPosted = true;
-        const {email, password} = formState;
+        //const {email, password} = formState;
     })
 
     const emailError = useComputed$(()=>{

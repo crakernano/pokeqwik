@@ -1,7 +1,6 @@
-import { $, component$, useContext, useSignal } from '@builder.io/qwik';
-import { DocumentHead, Link, useNavigate } from '@builder.io/qwik-city';
+import { component$ } from '@builder.io/qwik';
+import { DocumentHead, Link } from '@builder.io/qwik-city';
 import { PokemonImage } from '~/components/pokemons/pokemon-image';
-import { PokemonGameContext } from '~/context/pokemon/pokemon-game.context';
 import { usePokemonGame } from '~/hooks/use-pokemon-game';
 
 export default component$(() => {
@@ -12,7 +11,7 @@ export default component$(() => {
 
   //const pokemonGame = useContext(PokemonGameContext);
 
-  const nav = useNavigate();
+  //const nav = useNavigate();
   const {
     isPokemonVisible,
     showBackPokemon,
@@ -24,9 +23,10 @@ export default component$(() => {
     
   } = usePokemonGame();
 
-  const goToPokemon = $((id: number)=>{
-    nav(`/pokemon/${id}/`)
-  });
+
+  // const goToPokemon = $((id: number)=>{
+  //   nav(`/pokemon/${id}/`)
+  // });
 
   return (
     <>

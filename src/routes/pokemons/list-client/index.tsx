@@ -1,4 +1,4 @@
-import { $, component$, useOnDocument, useStore, useTask$, useVisibleTask$ } from '@builder.io/qwik';
+import { $, component$, useOnDocument, useStore, useTask$ } from '@builder.io/qwik';
 import type{ DocumentHead } from '@builder.io/qwik-city';
 import { PokemonImage } from '~/components/pokemons/pokemon-image';
 import { getSmallPokemons } from '~/helpers/get-pokemons';
